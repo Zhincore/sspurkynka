@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <noscript>
+        <link rel="stylesheet" href="css/style-sissy.css">
+    </noscript>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <title>SSPurkyňka RE-RE-DESIGN</title>
+</head>
+<body>
+
+    <header id="header">
+        <nav id="navbar">
+            <!-- navbar-toggler -->
+            <btn class="navbar-toggler">
+                <i class="fas fa-bars"></i> <h1 class="d-none">Menu</h1>
+            </btn>
+            
+            <!-- navbar-brand -->
+            <a class="navbar-brand" href="#">
+                <img src="images/spseit-white.svg.svg"> SPŠ Brno, Purkyňova, p. o.
+            </a>
+            
+            <!-- nav -->
+            <ul class="nostyle nav">
+                <li>
+                    <a href="#" class="active">Domů</a>
+                </li>
+                <li>
+                    <a href="#">Ven</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div id="welcome">
+            <img id="welcome-bg" src="images/bg.jpg">
+            
+            <div id="welcome-logo">
+                <div class="text">
+                    <h1>Střední průmyslová škola Brno, Purkyňova</h1>
+                    <p class="big">Purkyňova 97, 612 00, Brno</p>
+                </div>
+                <img src="images/spseit.svg.svg">
+            </div>
+            
+            <div id="welcome-contacts">
+                <a href="https://www.facebook.com/sspbrno" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://plus.google.com/u/0/103616303867408924331/posts" target="_blank"><i class="fab fa-google-plus"></i></a>
+                <a href="https://twitter.com/Purkynka" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        
+        <script>
+        $(document).ready(() => {
+            // Add background to navbar when scrolled
+            $("#navbar").toggleClass("scrolled", $(this).scrollTop() > 1);
+            $(document).scroll(() => {
+                $("#navbar").toggleClass("scrolled", $(this).scrollTop() > 1);
+            });
+        });
+        </script>
+        
+    </header>
+    
+    <div id="primary">
+        <section>
+            <main>
+                <h1>Novinky</h1>
+                
+                <article class="article">
+                    <h1>SamPLE TexT</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus dui id ligula aliquam dictum. Nunc lacus mi, pulvinar vel interdum eu, blandit cursus libero. Suspendisse finibus elit sed viverra hendrerit. Pellentesque consectetur tempor risus, in consequat dui varius at. Suspendisse maximus neque quis purus lacinia, vitae volutpat turpis accumsan. Nunc aliquam, ipsum sed tristique porta, mauris risus fringilla sapien, sed vehicula dolor leo eget odio. Etiam ut nisi quam.
+
+    Phasellus convallis, risus ac tempus vestibulum, turpis risus maximus nunc, id rhoncus augue erat et dui. Fusce pretium, odio non varius accumsan, velit ipsum tincidunt massa, in gravida tortor ex nec tellus. Mauris ultrices luctus dignissim. Nam dictum est quis justo finibus, vel condimentum augue dictum. Etiam finibus eleifend pretium. Fusce elementum velit metus, vel tristique eros aliquet ac. Phasellus at mauris eget orci facilisis commodo. Pellentesque in ullamcorper ligula, eu cursus lectus. Etiam et tellus orci. Sed vel ipsum vel odio pharetra ultrices. Nunc vel turpis in massa dignissim fringilla quis a urna. Donec at tempus erat. Nullam nec erat sed augue lacinia posuere. Integer nisi felis, sollicitudin eget blandit iaculis, feugiat vel sem.
+
+    Cras pellentesque, nulla non aliquam accumsan, nulla mauris suscipit nisi, eu tincidunt arcu nisl eget nisi. In eget nibh ac odio placerat interdum ac ac augue. Vestibulum quis consequat est. Suspendisse nulla nibh, vehicula non finibus a, consequat id mauris. Suspendisse ac est sit amet arcu cursus faucibus. Fusce ac vehicula velit. Cras accumsan feugiat purus, eget mollis eros accumsan quis. Nunc at elementum justo, aliquet condimentum neque. Nullam ac ex ac risus pretium posuere eu a tellus. Ut pretium id arcu nec vulputate.
+
+    Nulla nec pulvinar tortor. Mauris varius pellentesque tortor, ac dictum arcu dignissim non. Aliquam ut lobortis velit. Praesent a ullamcorper mauris, eu sollicitudin arcu. Maecenas fringilla eros ut velit tempor dapibus. Sed cursus ex vehicula risus rhoncus luctus. Fusce ut tristique massa. Vestibulum ut massa urna. Etiam dictum rutrum erat sed facilisis. Quisque a leo erat. Donec varius neque ac purus convallis ultrices. Aliquam ac dignissim dolor.
+
+    Suspendisse potenti. Suspendisse at dui id purus elementum ultrices. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut quis elit pulvinar, suscipit nibh at, commodo odio. Quisque in justo sed erat facilisis placerat quis ultrices purus. Aliquam fermentum efficitur pulvinar. In vitae arcu ut massa facilisis mollis eget sed mi. Donec consectetur ex in velit sodales pharetra. Integer varius ac nibh in elementum. Donec eu vulputate eros, in facilisis tortor. Aenean quis lacus vel tellus consequat consectetur eget id augue. Ut id efficitur eros, a sodales arcu. Suspendisse et nibh vel dui congue pellentesque. Proin quam nunc, eleifend pretium tincidunt id, sagittis at risus. Proin pharetra leo nulla. Mauris facilisis ligula quam, ac consequat orci ullamcorper tempor. </p>
+                </article>
+            </main>
+        </section>
+        
+        <section id="sidebar">
+            <aside>
+                <h1>SIDEBAROS</h1>
+            </aside>
+        </section>
+    </div>
+    
+    <script src="js/main.js"></script>    
+</body>
+</html>
