@@ -5,39 +5,47 @@
     <meta name="viewport" content="height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style-brave.css">
     <noscript>
         <link rel="stylesheet" href="css/style-sissy.css">
     </noscript>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
     <title>SSPurkyňka RE-RE-DESIGN</title>
 </head>
 <body>
 
     <header id="header">
-        <nav id="navbar">
-            <!-- navbar-toggler -->
-            <btn class="navbar-toggler">
-                <i class="fas fa-bars"></i> <h1 class="d-none">Menu</h1>
-            </btn>
-            
-            <!-- navbar-brand -->
-            <a class="navbar-brand" href="#">
-                <img src="images/spseit-white.svg.svg"> SPŠ Brno, Purkyňova, p. o.
-            </a>
-            
-            <!-- nav -->
-            <ul class="nostyle nav">
-                <li>
-                    <a href="#" class="active">Domů</a>
-                </li>
-                <li>
-                    <a href="#">Ven</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="navbar-wrap">
+            <nav id="navbar">
+                <!-- navbar-toggler -->
+                <btn class="navbar-toggler">
+                    <i class="fas fa-bars"></i> <h1 class="d-none">Menu</h1>
+                </btn>
+                
+                <!-- navbar-brand -->
+                <a class="navbar-brand" href="#">
+                    <img src="images/spseit-white.svg.svg"> SPŠ Brno, Purkyňova, p. o.
+                </a>
+                
+                <!-- nav -->
+                <ul class="nostyle nav">
+                    <li>
+                        <a href="#" class="active">Domů</a>
+                    </li>
+                    <li>
+                        <a href="#">Ven</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <script src="js/navbar-bg.js" defer></script>
         
         <div id="welcome">
-            <img id="welcome-bg" src="images/bg.jpg">
+            <div id="welcome-bg">
+                <img src="images/bg.jpg">
+            </div>
             
             <div id="welcome-logo">
                 <div class="text">
@@ -52,17 +60,13 @@
                 <a href="https://plus.google.com/u/0/103616303867408924331/posts" target="_blank"><i class="fab fa-google-plus"></i></a>
                 <a href="https://twitter.com/Purkynka" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
+            
+            <div id="welcome-scrolldown">
+                <i class="fas fa-angle-down"></i>
+            </div>
         </div>
         
-        <script>
-        $(document).ready(() => {
-            // Add background to navbar when scrolled
-            $("#navbar").toggleClass("scrolled", $(this).scrollTop() > 1);
-            $(document).scroll(() => {
-                $("#navbar").toggleClass("scrolled", $(this).scrollTop() > 1);
-            });
-        });
-        </script>
+        <script src="js/welcome.js" defer></script>
         
     </header>
     

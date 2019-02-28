@@ -55,9 +55,10 @@
 /*===============*/
 
 body{
-    background-color: var(--blue);
+    background-color: var(--darkBlue);
     color: var(--light);
     font-size: large;
+    min-height: 500vh;
 }
 
 ul.nostyle{
@@ -77,11 +78,14 @@ ul.nostyle{
 /*= NAVBAR/NAV = */
 /*===============*/
 
-nav#navbar{
+#navbar-wrap{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+}
+
+nav#navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -157,11 +161,12 @@ nav#navbar .nav > li > a:active, nav#navbar .nav > li > a.active{
 
 #welcome{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    position: relative;
 }
 
 #welcome-bg{
@@ -172,9 +177,16 @@ nav#navbar .nav > li > a:active, nav#navbar .nav > li > a.active{
     bottom: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: .75;
+    background-color: var(--blue);
     z-index: -1;
+}
+
+#welcome-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    background-color: var(--darkBlue);
+    opacity: .75;
 }
 
 #welcome-logo{
@@ -182,12 +194,16 @@ nav#navbar .nav > li > a:active, nav#navbar .nav > li > a.active{
     justify-content: center;
     align-items: center;
     color: var(--light);
-    z-index: 1;
 }
 
 #welcome-logo .text{
+    width: 50vw;
     max-width: 50vw;
     text-align: right;
+}
+
+#welcome-logo .text *{
+    width: 50vw;
 }
 
 #welcome-logo p{
@@ -220,6 +236,13 @@ nav#navbar .nav > li > a:active, nav#navbar .nav > li > a.active{
 #welcome-contacts a:hover{
     color: var(--light);
     opacity: .75;
+}
+
+#welcome-scrolldown{
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    font-size: 48px;
 }
 
 
