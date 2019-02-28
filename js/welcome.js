@@ -3,7 +3,7 @@
  *
  */
  
-$(document).ready(() => {
+$(window).on('load', () => {
     const $doc = $(document);
     const welcome = $("#welcome");
     var height = window.innerHeight;//welcome.height();
