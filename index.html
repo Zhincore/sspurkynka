@@ -19,28 +19,39 @@
         <div id="navbar-wrap">
             <nav id="navbar">
                 <!-- navbar-toggler -->
-                <btn class="navbar-toggler">
+                <button class="navbar-toggler" data-toggle="#nav-wrap">
                     <i class="fas fa-bars"></i> <h1 class="d-none">Menu</h1>
-                </btn>
+                </button>
                 
                 <!-- navbar-brand -->
                 <a class="navbar-brand" href="#">
-                    <img src="images/spseit-white.svg.svg"> SPŠ Brno, Purkyňova, p. o.
+                    <img src="images/spseit-white.svg.svg"> <span>SPŠ Brno, Purkyňova, p.&nbsp;o.</span>
                 </a>
                 
                 <!-- nav -->
-                <ul class="nostyle nav">
-                    <li>
-                        <a href="#" class="active">Domů</a>
-                    </li>
-                    <li>
-                        <a href="#">Ven</a>
-                    </li>
-                </ul>
+                <div id="nav-wrap">
+                    <ul class="nostyle nav">
+                        <li>
+                            <a href="#" class="active">Domů</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Dropdown</a>
+                            
+                            <ul class="nostyle dropdown-menu">
+                                <li><a href="#">Položka 1</a></li>
+                                <li><a href="#">Položka 2</a></li>
+                                <li><a href="#">Položka 3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Ven</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
         
-        <script src="js/navbar-bg.js" defer></script>
+        <script src="js/navbar.js" defer></script>
         
         <div id="welcome">
             <div id="welcome-bg">

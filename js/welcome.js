@@ -9,14 +9,7 @@ $(window).on('load', () => {
     var height = window.innerHeight;//welcome.height();
     
     //
-    // Scroll effect
-    //
-    $doc.scroll(() => {
-        welcome.height(height - ($doc.scrollTop() /*/ 1**/));
-    });
-    
-    //
-    // Loading animations
+    // Load animation
     //
     $("#welcome-logo img").fadeIn("fast", "easeInQuart", () => {
         $("#welcome-logo .text").width(0).show().animate({ width: "100%" }, "slow", "easeInQuart", () => {
@@ -29,5 +22,24 @@ $(window).on('load', () => {
         
         $("#welcome-bg").delay(500).fadeIn(1000, "linear");
     });
+    
+    
+    //
+    // Scroll effects
+    //
+    // Remove background to navbar and add it when scrolled
+    $("#navbar").toggleClass("scrolled", $(this).scrollTop() > 1);
+    $doc.scroll(() => {
+        $("#navbar").toggleClass("scrolled", $(this).scrollTop() > 1);
+    });
+    
+    // Change size of header accordingly to scroll
+    if(window.innerWidth > 768){
+        welcome.height(height - ($doc.scrollTop() /*/ 1**/));
+        
+        $doc.scroll(() => {
+            welcome.height(height - ($doc.scrollTop() /*/ 1**/));
+        });
+    }
     
 });
