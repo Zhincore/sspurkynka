@@ -8,6 +8,9 @@ $(window).on('load', () => {
     const welcome = $("#welcome");
     var height = window.innerHeight;//welcome.height();
     
+    // Set static height
+    welcome.height(window.innerHeight);
+    
     //
     // Load animation
     //
