@@ -92,7 +92,6 @@ nav#navbar{
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    flex-wrap: wrap;
     
     width: 100%;
     
@@ -196,6 +195,9 @@ nav#navbar.scrolled .dropdown-menu, nav#navbar.expanded .dropdown-menu{
 
 
 @media screen and (max-width: 768px) {
+    nav#navbar{
+        flex-wrap: wrap;
+    }
     nav#navbar .navbar-toggler{
         display: flex;
     }
@@ -346,6 +348,7 @@ nav#navbar.scrolled .dropdown-menu, nav#navbar.expanded .dropdown-menu{
     #welcome-logo img{
         height: auto;
         width: 100%;
+        max-width: 256px;
         object-fit: contain;
         margin: 0;
         padding: 32px;

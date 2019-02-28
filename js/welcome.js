@@ -11,7 +11,7 @@ $(window).on('load', () => {
     //
     // Load animation
     //
-    $("#welcome-logo img").fadeIn("fast", "easeInQuart", () => {
+    $("#welcome-logo img").delay(250).fadeIn(250, "easeInCirc", () => {
         $("#welcome-logo .text").width(0).show().animate({ width: "100%" }, "slow", "easeInQuart", () => {
             $("#navbar-wrap").slideDown(() => {
                 $("#welcome-contacts").slideDown("fast", () => {
